@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Evelyn Lesly Apaza Ali</title>
+
+<title>Curriculum Vitae - Evelyn Lesly Apaza Ali</title>
 
 <style>
 * {
@@ -14,29 +15,27 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #eee8e8;
     color: #333;
-    padding: 30px 12px;
+    padding: 30px 15px;
 }
 
 .cv {
-    max-width: 1000px;
+    max-width: 1050px;
+    min-height: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: 34% 66%;
     background: white;
-    box-shadow: 0 5px 25px #999;
-    min-height: 1100px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
 }
+
+/* COLUMNA IZQUIERDA */
 
 .left {
     background: #f1dddd;
     padding: 35px 28px;
-}
-
-.right {
-    padding: 45px 40px;
 }
 
 .photo {
@@ -44,30 +43,9 @@ body {
     height: 250px;
     object-fit: cover;
     display: block;
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
     border: 7px solid white;
     outline: 2px solid #c69b8c;
-}
-
-h1 {
-    font-family: Georgia, serif;
-    font-size: 35px;
-    font-weight: normal;
-    text-align: center;
-}
-
-.subtitle {
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin: 12px 0 30px;
-    line-height: 1.6;
-}
-
-.line {
-    height: 3px;
-    background: #e9d1d1;
-    margin-bottom: 30px;
 }
 
 .section {
@@ -76,16 +54,17 @@ h1 {
 
 .section h2 {
     background: white;
-    padding: 9px;
+    padding: 10px;
     font-size: 17px;
     text-align: center;
     letter-spacing: 2px;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 }
 
-.section p, .section li {
+.section p,
+.section li {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 ul {
@@ -93,13 +72,42 @@ ul {
 }
 
 .contact p {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     overflow-wrap: anywhere;
+}
+
+/* COLUMNA DERECHA */
+
+.right {
+    padding: 45px 40px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 43px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.3;
+    color: #252525;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin: 15px 0 25px;
+}
+
+.line {
+    height: 3px;
+    background: #e9d1d1;
+    margin-bottom: 30px;
 }
 
 .right h2 {
     background: #f1dddd;
-    padding: 10px 15px;
+    padding: 11px 15px;
     font-size: 17px;
     letter-spacing: 2px;
     margin: 30px 0 20px;
@@ -109,19 +117,19 @@ ul {
     margin-top: 0;
 }
 
-.name-small {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 8px;
+.job {
+    margin-bottom: 25px;
 }
 
-.job {
-    margin-bottom: 23px;
+.name-small {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
 }
 
 .job p {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .date {
@@ -136,17 +144,59 @@ footer {
     color: #777;
 }
 
-@media(max-width: 700px) {
-    .cv {
-        grid-template-columns: 1fr;
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
     }
 
-    .right, .left {
-        padding: 30px 25px;
+    .cv {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .left,
+    .right {
+        padding: 25px 22px;
+    }
+
+    .photo {
+        width: 190px;
+        height: 230px;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .section p,
+    .section li,
+    .job p {
+        font-size: 14px;
+    }
+}
+
+/* IMPRESIÓN EN PAPEL */
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+
+    .cv {
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    footer {
+        display: none;
     }
 }
 </style>
@@ -156,17 +206,22 @@ footer {
 
 <div class="cv">
 
+<!-- COLUMNA IZQUIERDA -->
+
 <aside class="left">
 
-    <img src="foto.jpg" alt="Fotografía de Evelyn" class="photo">
+    <img src="Foto.jpg"
+         alt="Fotografía de Evelyn Lesly Apaza Ali"
+         class="photo">
 
     <div class="section">
         <h2>SOBRE MÍ</h2>
+
         <p>
         Soy Evelyn Lesly Apaza Ali, estudiante de la carrera
         de Arquitectura de Plataformas y Servicios de
         Tecnologías de la Información. Me considero una
-        persona creativa, responsable, con disposición
+        persona creativa, responsable y con disposición
         para aprender y desarrollar nuevas habilidades.
         Me interesa la tecnología, la innovación y el
         crecimiento personal y profesional.
@@ -175,14 +230,24 @@ footer {
 
     <div class="section contact">
         <h2>CONTACTO</h2>
+
         <p>☎ Teléfono: [Tu número]</p>
+
         <p>✉ Correo: [Tu correo electrónico]</p>
+
         <p>⌖ Santa Lucía, Lampa, Puno, Perú</p>
-        <p>🌐 GitHub: [Tu enlace de GitHub]</p>
+
+        <p>
+        🌐 GitHub:
+        <a href="https://github.com/lizbethjosec367-ux">
+        Mi perfil
+        </a>
+        </p>
     </div>
 
     <div class="section">
         <h2>HABILIDADES</h2>
+
         <ul>
             <li>Creatividad e imaginación</li>
             <li>Responsabilidad y compromiso</li>
@@ -196,6 +261,7 @@ footer {
 
     <div class="section">
         <h2>IDIOMAS</h2>
+
         <ul>
             <li>Español: fluido</li>
             <li>Quechua: conocimiento</li>
@@ -205,6 +271,7 @@ footer {
 
     <div class="section">
         <h2>INTERESES</h2>
+
         <ul>
             <li>Canto y baile</li>
             <li>Manualidades</li>
@@ -215,9 +282,14 @@ footer {
 
 </aside>
 
+<!-- COLUMNA DERECHA -->
+
 <main class="right">
 
-    <h1>Evelyn Lesly<br>Apaza Ali</h1>
+    <h1>
+        Evelyn Lesly<br>
+        Apaza Ali
+    </h1>
 
     <p class="subtitle">
         ESTUDIANTE DE ARQUITECTURA DE PLATAFORMAS
@@ -229,6 +301,7 @@ footer {
     <h2>PERFIL PROFESIONAL</h2>
 
     <div class="job">
+
         <p>
         Estudiante del Instituto de Educación Superior
         Tecnológico Público Santa Lucía, perteneciente
@@ -240,11 +313,13 @@ footer {
         tecnológicos, adquirir experiencia y contribuir
         positivamente en el ámbito laboral.
         </p>
+
     </div>
 
     <h2>FORMACIÓN ACADÉMICA</h2>
 
     <div class="job">
+
         <p class="name-small">
         ARQUITECTURA DE PLATAFORMAS Y SERVICIOS
         DE TECNOLOGÍAS DE LA INFORMACIÓN
@@ -262,22 +337,27 @@ footer {
         de conocimientos y habilidades en el área de
         las tecnologías de la información.
         </p>
+
     </div>
 
     <h2>CAPACITACIONES</h2>
 
     <div class="job">
+
         <p class="name-small">FIBRA ÓPTICA</p>
+
         <p>
         Participación en capacitación relacionada con
         fibra óptica, fortaleciendo conocimientos
         sobre esta tecnología de comunicación.
         </p>
+
     </div>
 
     <h2>OBJETIVO PROFESIONAL</h2>
 
     <div class="job">
+
         <p>
         Continuar desarrollándome profesionalmente
         en el área de tecnologías de la información,
@@ -285,24 +365,33 @@ footer {
         nuevas herramientas tecnológicas y adquirir
         experiencia que me permita crecer laboralmente.
         </p>
+
     </div>
 
     <h2>INFORMACIÓN PERSONAL</h2>
 
     <div class="job">
+
         <p><strong>Nombre:</strong> Evelyn Lesly Apaza Ali</p>
+
         <p><strong>Edad:</strong> 21 años</p>
+
         <p><strong>Localidad:</strong> Santa Lucía</p>
+
         <p><strong>Provincia:</strong> Lampa</p>
+
         <p><strong>Departamento:</strong> Puno</p>
+
         <p><strong>País:</strong> Perú</p>
+
     </div>
 
 </main>
+
 </div>
 
 <footer>
-© 2026 Evelyn Lesly Apaza Ali - Curriculum Vitae
+    © 2026 Evelyn Lesly Apaza Ali - Curriculum Vitae
 </footer>
 
 </body>
